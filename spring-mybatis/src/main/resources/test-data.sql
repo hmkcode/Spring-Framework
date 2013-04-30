@@ -1,0 +1,6 @@
+INSERT INTO person (id,name) VALUES (1, 'person-1 name')
+INSERT INTO person (id,name) VALUES (2, 'person-2 name')
+INSERT INTO person (id,name) VALUES (3, 'person-3 name')
+INSERT INTO person (id,name) VALUES (4, 'person-4 name')
+INSERT INTO person (id,name) VALUES (5, 'person-5 name')
+INSERT INTO person (id,name) VALUES (6, 'person-6 name')
