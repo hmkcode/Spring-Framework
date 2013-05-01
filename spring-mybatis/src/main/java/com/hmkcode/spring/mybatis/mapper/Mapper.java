@@ -19,21 +19,30 @@ public interface Mapper {
   public List<Person> selectAllPerson();
   
   
-  /**
-   * Retrieves a person 
-   * @param person id
-   * @return person
-   */
+    /**
+    * Retrieves a person 
+    * @param person id
+    * @return person
+    */
+    //SQL query using annotation
+    @Select("SELECT * FROM person")
+    public List<Person> selectAllPerson2();
   
-  //SQL query using annotation
-  @Select("SELECT * FROM person")
-  public List<Person> selectAllPerson2();
+    /******************************************
+    * Retrieves a person 
+    * @param person id
+    * @return person
+    */
+    //SQL query using annotation
+    @Select("SELECT * FROM person WHERE id = #{id}")
+    public Person selectPerson(@Param("id") int id);
   
-  //SQL query using annotation
-  @Select("SELECT * FROM person WHERE id = #{id}")
-  public Person selectPerson(@Param("id") int id);
-  
-  @Insert("INSERT INTO person (id,name) VALUES(#{id},#{name})")
-  public void insertPerson(Person person);
+    /******************************************
+    * Insert a person 
+    * @param person
+    * @return int
+    */
+    @Insert("INSERT INTO person (name) VALUES (#{name})")
+    public int insertPerson(Person person);
 }
 
