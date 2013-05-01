@@ -15,24 +15,14 @@ public class Service {
   @Autowired 
   private Mapper mapper;
 
-  
-  @SuppressWarnings("unchecked")
+ 
   public List<Person> selectAllPerson() {
   	return mapper.selectAllPerson();
   }
-  
-  @SuppressWarnings("unchecked")
   public Person selectPerson(int id) {
   	return mapper.selectPerson(id);
   }
-  
-  public void insertPerson(Person person){
-	  mapper.insertPerson(person);
+  public int insertPerson(Person person){
+	return mapper.insertPerson(person);
   }
-  
-  public List<Person> selectAllPerson2(){
-	  return mapper.selectAllPerson2();
-  }
-  
-
 }
