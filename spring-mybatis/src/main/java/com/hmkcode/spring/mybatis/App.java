@@ -23,26 +23,22 @@ public class App
   	
       log.info("Running App...");
 
-      
-      System.out.println("List<Person> persons = service.selectAllPerson()");
-      List<Person> persons = service.selectAllPerson();
-      System.out.println(persons);
-      
-      System.out.println("Person person = service.selectPerson(2)");
-      Person person = service.selectPerson(2);
-      System.out.println(person);
+        System.out.println("List<Person> persons = service.selectAllPerson()");
+        List<Person> persons = service.selectAllPerson();
+        System.out.println("-> "+persons+"\n");
+                          
+        System.out.println("Person person = service.selectPerson(2)");
+        Person person = service.selectPerson(2);
+        System.out.println("-> "+person+"\n");
+                                                  
+        System.out.println("service.insertPerson(person)");
+        person.setName("Inserted person");
+        service.insertPerson(person);
+        System.out.println("-> inserted..."+"\n");
+                                                                                
+        System.out.println("List<Person> persons = service.selectAllPerson()");
+        persons = service.selectAllPerson();
+        System.out.println("-> "+persons+"\n");
 
-      
-      System.out.println("service.insertPerson(person)");
-      person.setId(persons.size()+1);
-      service.insertPerson(person);
-      System.out.println(person);
-      
-      
-      System.out.println("List<Person> persons = service.selectAllPerson2()");
-      persons = service.selectAllPerson2();
-      System.out.println(persons);
-      
-      
     }
 }
