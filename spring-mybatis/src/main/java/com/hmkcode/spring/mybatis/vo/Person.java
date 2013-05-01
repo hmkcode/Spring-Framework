@@ -8,7 +8,7 @@ public class Person
 {
   
   private int id;
-     private String name;
+  private String name;
   
      public int getId() {
   	return id;
@@ -22,8 +22,7 @@ public class Person
   public void setName(String name) {
   	this.name = name;
   }
-  
   public String toString(){
-  	return "\n"+"id: "+id+" - name: "+name+"\n"; 
+  	return "id: "+id+" - name: "+name; 
   }
 }
