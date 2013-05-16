@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.hmkcode.spring.mybatis.mapper.Mapper">
+	
+	<!-- Mapping Parent -->
+	<resultMap type="com.hmkcode.spring.mybatis.vo.Parent" id="Parent">
+		<id column="parentId" property="parentId"  />
+		<result column="parentName" property="parentName"  />	
+		
+		<!-- if collection is used SQL should be in XML -->
+		<collection property="children" column="parentId" select="selectAllChildren" javaType="ArrayList" />
+	</resultMap>
+	
+	<!-- Mapping Child -->
+	<resultMap type="com.hmkcode.spring.mybatis.vo.Child" id="Child">
+		<id column="childId" property="childId"  />
+		<result column="parentId" property="parentId"  />
+		<result column="childName" property="childName"  />
+	</resultMap>
+
+	<!-- ************************************************************************************* -->
+	
+	<!-- Mapper.selectAllParent() -->
+	<select id="selectAllParent" resultMap="Parent" timeout="10">
+		SELECT * FROM parent
+	</select>
+	
+	<!-- Mapper.selectParent() -->
+	<select id="selectParent" resultMap="Parent" parameterType="int" timeout="10">
+		SELECT * FROM parent WHERE parentId= #{id}
+	</select>
+	
+	<!-- Mapper.insertchild() -->
+	<insert id="insertchild" parameterType="Child" timeout="10">
+		INSERT INTO child
+			(parentId,childName)
+			VALUES 
+			(#{parentId},#{childName})
+	</insert>
+</mapper>
