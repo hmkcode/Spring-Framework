@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.hmkcode</groupId>
-  <artifactId>spring-event</artifactId>
+  <artifactId>spring-custom-event</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>spring-event</name>
+  <name>spring-custom-event</name>
   <url>http://maven.apache.org</url>
 
   <properties>
