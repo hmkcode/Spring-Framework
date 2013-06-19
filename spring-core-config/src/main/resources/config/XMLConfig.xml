@@ -2,9 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-	<bean id="myBean" class="com.hmkcode.spring.beans.MyBean">
-		<property name="name" value="xmlBean" />
-	</bean>
+ 
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+    <bean id="myBean" class="com.hmkcode.spring.beans.MyBean">
+        <property name="name" value="xmlBean" />
+    </bean>
+ 
+    <bean id="anotherBean" class="com.hmkcode.spring.beans.AnotherBean">
+                <property name="myBean" ref="myBean" />
+    </bean>
 </beans>

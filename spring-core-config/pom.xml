@@ -12,23 +12,29 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<org.springframework.version>3.1.0.RELEASE</org.springframework.version>
   </properties>
 
   <dependencies>
    	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-core</artifactId>
-		<version>3.2.3.RELEASE</version>
+		<version>${org.springframework.version}</version>
 	</dependency>   
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-beans</artifactId>
-		<version>3.2.3.RELEASE</version>
+		<version>${org.springframework.version}</version>
 	</dependency>
 	<dependency>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-context</artifactId>
-		<version>3.2.3.RELEASE</version>
-	</dependency>            
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>cglib</groupId>
+		<artifactId>cglib</artifactId>
+		<version>2.2.2</version>
+	</dependency>                          
   </dependencies>
 </project>
