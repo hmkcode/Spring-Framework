@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+  	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+  	<script src="bootstrap/js/bootstrap.js" type="text/javascript"></script>
+  	<script src="js/myfunction.js" type="text/javascript"></script>
+  	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  	<link href="css/mystyle.css" rel="stylesheet">
+  	 <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div id="site-title-content">
+		<h3 class="site-header"><a rel="home" title="HMKCode" href="http://hmkcode.com/">
+      		HMKCode</a>
+    	</h3>
+    	<h4 class="site-description">
+     	 	Code First!
+	    </h4>
+	</div>
+<div id="header">
+</div>
+<div class="social-button icon">
+		<a href="http://www.twitter.com/hmkcode" target="_blank" title="Visit Us On Twitter"><img src="img/twitter.png" style="border:0px;" alt="Visit Us On Twitter"></a>
+		<a href="https://www.facebook.com/pages/HMKCode/157443611098005" target="_blank" title="Visit Us On Facebook"><img src="img/facebook.png" style="border:0px;" alt="Visit Us On Facebook"></a>
+		<a href="https://plus.google.com/b/113117706677442855053/113117706677442855053" target="_blank" title="Visit Us On Google Plus"><img src="img/googleplus.png" style="border:0px;" alt="Visit Us On Google Plus"></a>
+</div>
+
+	<h1 style="text-align:center">Java Regex<br></h1> 
+	<h3 style="text-align:center"><i style="color:#ccc"><small>Developed using: Spring MVC + JQuery + JSON + GAE + AngularJS + Bootstrap</small></i></h3>
+
+	<!-- user twitter -->
+	<div id="user_twitter">
+		<div class="input-prepend">
+			<span class="add-on">@</span>
+			<input class="span2" id="prependedInput" type="text" placeholder="Username">
+		</div>
+	</div>
+
+	<!-- main -->
+	<div id="main">
+	
+		<!-- input div -->
+		<div id="input-div">
+			<div>
+			<!-- File input -->     
+				<label>Regex</label><input name="regex" id="regex" type="text" class="input-xlarge" placeholder="Enter pattern..." /><br/>
+				<label>Text</label>
+				<textarea id="text" name="text" rows="10"  style="width:400px"></textarea>
+				<div class="form-actions">
+					<button  onclick="match()" class="btn">Match</button>
+				</div>
+			</div>
+		</div>
+		
+		<!-- ref div -->
+		<div id="ref-div">
+			<div class="tabbable" >
+			 <!-- Only required for left/right tabs -->
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab1" data-toggle="tab">Reg Expression</a></li>
+					<li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="tab1">
+						
+								<table class="table  table-bordered" >
+									<tr>
+										<th>#</th>
+										<th>Pattern</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>^[a-z0-9_-]{3,15}$</td>
+										<td>Username regular expression</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$</td>
+										<td>E-mail address regular expression </td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>([^\s]+(\.(?i)(jpg|png|gif|bmp))$)</td>
+										<td>Image file extension regular</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>(1[012]|[1-9]):[0-5][0-9](\\s)?(?i)(am|pm)</td>
+										<td>Time in 12 Hours format regular expression</td>
+									</tr>
+								</table>
+							</div>
+						<div class="tab-pane" id="tab2">
+		      				<p>Howdy, I'm in Section 2.</p>
+		 				</div>
+		 			</div>
+			</div>
+		</div>
+	</div>
+<div id="results"></div>
+
+</body>
+</html>
