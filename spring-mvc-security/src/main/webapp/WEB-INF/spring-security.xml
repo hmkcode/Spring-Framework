@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bean:beans xmlns:bean="http://www.springframework.org/schema/beans"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xmlns="http://www.springframework.org/schema/security"
+			xsi:schemaLocation="http://www.springframework.org/schema/beans
+				http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+				http://www.springframework.org/schema/security
+				http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+ 
+	<http auto-config="true">
+		<intercept-url pattern="/rest/controller/any/**" access="ROLE_ANONYMOUS,ROLE_USER"/>
+		
+		<intercept-url pattern="/rest/controller/user/**" access="ROLE_USER" />
+	</http>
+ 
+	<authentication-manager>
+	  <authentication-provider>
+	    <user-service>
+			<user name="hmkcode" password="1234" authorities="ROLE_USER" />
+			<user name="user2" password="1234" authorities="ROLE_ANONYMOUS" />
+	    </user-service>
+	  </authentication-provider>
+	</authentication-manager>
+ 
+</bean:beans>
