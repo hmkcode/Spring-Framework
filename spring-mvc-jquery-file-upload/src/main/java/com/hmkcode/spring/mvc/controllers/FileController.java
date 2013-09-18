@@ -57,6 +57,10 @@ public class FileController {
 			 
 			 try {
 				fileMeta.setBytes(mpf.getBytes());
+				
+				// copy file to local disk (make sure the path "e.g. D:/temp/files" exists)
+				FileCopyUtils.copy(mpf.getBytes(), new FileOutputStream("D:/temp/files/"+mpf.getOriginalFilename()));
+				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
