@@ -35,7 +35,7 @@ public class TestController {
 	}
 	@Ignore
 	@Test
-	public void givenWac_whenServletContext_thenItProvidesGreetController() {
+	public void configTest() {
 	    ServletContext servletContext = wac.getServletContext();
 	     
 	    Assert.assertNotNull(servletContext);
