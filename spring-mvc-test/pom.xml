@@ -15,7 +15,7 @@
 	<spring.version>5.0.8.RELEASE</spring.version>
 	<junit.version>4.12</junit.version>
 	<javax.servlet.version>4.0.1</javax.servlet.version>
-	<jackson.version>2.9.6</jackson.version>
+	<jackson.version>2.13.4.1</jackson.version>
   </properties>
 
   <dependencies>
