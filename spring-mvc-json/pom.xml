@@ -1,6 +1,6 @@
  <dependencies>
         <dependency><!-- spring mvc -->
-            <groupId>org.springframework</groupId><artifactId>spring-webmvc</artifactId><version>3.0.5.RELEASE</version>
+            <groupId>org.springframework</groupId><artifactId>spring-webmvc</artifactId><version>5.2.20.RELEASE</version>
         </dependency>
         <dependency><!-- jackson -->
             <groupId>org.codehaus.jackson</groupId><artifactId>jackson-mapper-asl</artifactId><version>1.4.2</version>
